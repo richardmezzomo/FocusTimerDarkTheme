@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*COLORS*/
+  --bg-light: #FFFFFF;
+  --bg-dark: #121214;
+  --bg-card: rgba(225, 225, 230, 1);
+  --bg-card-dark: rgba(2, 121, 157, 1);
+  --font-color: rgba(50, 50, 56, 1);
+  
+  /*FONT-SIZE*/
+  font-size: 62.5%;
+  
+  --fs-primary: 12.66rem;
+
+  /*FONT-FAMILY*/
+  --ff-primary: 'Roboto', sans-serif;
+}
+
+body {
+  color: var(--font-color);
+  --ff-primary: 'Roboto', sans-serif;
+  background: var(--bg-light);
+}
+
+header {
+  display: flex;
+  justify-content: end;
+  margin: 2rem;
+}
+
+.light-mode:hover {
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  place-items: center;  
+}
+
+main {
+  display: flex;
+  align-items: center;
+  gap: 19.2rem;
+}
+
+.time {
+  margin-bottom: 2rem;
+}
+
+span {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-primary);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.controls button {
+  background: none;
+  border: none;
+}
+
+.controls button:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.hide {
+  display: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3.2rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: 2.4rem;
+
+  width: 13.8rem;
+  height: 15.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card input {
+  width: 90px;
+  margin-top: 3.2rem;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.clicked {
+  background-color: var(--bg-card-dark);
+}
