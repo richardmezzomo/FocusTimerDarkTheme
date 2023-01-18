@@ -30,7 +30,7 @@ body {
 header {
   display: flex;
   justify-content: end;
-  margin: 2rem;
+  margin: 6rem 6rem 0 0;
 }
 
 .light-mode:hover {
@@ -40,6 +40,7 @@ header {
 .container {
   display: grid;
   place-items: center;  
+  margin-top: 9.2rem;
 }
 
 main {
@@ -99,7 +100,43 @@ span {
 .card input {
   width: 90px;
   margin-top: 3.2rem;
+  
 }
+
+#volumeBar {
+  appearance: none;
+  -webkit-appearance: none;
+
+  
+}
+
+.volumeBar {
+  background: #323238;
+  border-radius: .5rem;
+  height: .4rem;  
+}
+
+
+.volumeBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  border: none;
+  background: #323238;
+  
+}
+
+.volumeBar::-moz-range-thumb {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  border: none;
+  background: #323238;
+}
+
+
 
 .card:hover {
   cursor: pointer;
