@@ -13,8 +13,10 @@ const cardOfRainForest = document.querySelector('#rainForest')
 const cardOfRain = document.querySelector('#rain')
 const cardOfCoffeeShop = document.querySelector('#coffeeShop')
 const cardOfFireplace = document.querySelector('#fireplace')
-const volumeBar = document.querySelector('.volumeBar')
-
+const volumeRainForest = document.querySelector('#volumeRainForest')
+const volumeRain = document.querySelector('#volumeRain')
+const volumeCoffeeShop = document.querySelector('#volumeCoffeeShop')
+const volumeFireplace = document.querySelector('#volumeFireplace')
 
 //SOUNDS
 const soundOfRainForest = new Audio('./sounds/rainForest.wav')
@@ -29,17 +31,10 @@ function togglePlay(myAudio) {
   return myAudio.paused ? myAudio.play() : myAudio.pause();
 }
 
-function volumePlay(myAudio) {
-  myAudio.volume = volumeBar.value
+function volumePlay(myAudio, volumeBar) {
+  myAudio.volume = volumeBar.value / 100
 }
 
-
-
-
-// soundOfRainForest.loop = true;
-// soundOfRain.loop = true;
-// soundOfCoffeeShop.loop = true;
-// soundOfFireplace.loop = true;
 
 // VARIABLES
 let timerTimeOut;
@@ -163,11 +158,11 @@ buttonIncrease.addEventListener('click', function() {
 cardOfRainForest.addEventListener('dblclick', function() {
   cardOfRainForest.classList.toggle('clicked')
   togglePlay(soundOfRainForest)
-  volumePlay(soundOfRainForest)
+  
 })
 
 cardOfRainForest.addEventListener('input', function() {
-
+  volumePlay(soundOfRainForest, volumeRainForest)
 })
 
 cardOfRain.addEventListener('dblclick', function() {
@@ -175,13 +170,26 @@ cardOfRain.addEventListener('dblclick', function() {
   togglePlay(soundOfRain)
 })
 
+cardOfRain.addEventListener('input', function() {
+  volumePlay(soundOfRain, volumeRain)
+})
+
 cardOfCoffeeShop.addEventListener('dblclick', function() {
   cardOfCoffeeShop.classList.toggle('clicked')
   togglePlay(soundOfCoffeeShop)
+})
+
+cardOfCoffeeShop.addEventListener('input', function() {
+  volumePlay(soundOfCoffeeShop, volumeCoffeeShop)
 })
 
 cardOfFireplace.addEventListener('dblclick', function() {
   cardOfFireplace.classList.toggle('clicked')
   togglePlay(soundOfFireplace)
 })
+
+cardOfFireplace.addEventListener('input', function() {
+  volumePlay(soundOfFireplace, volumeFireplace)
+})
+
 
