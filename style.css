@@ -6,11 +6,10 @@
 
 :root {
   /*COLORS*/
-  --bg-light: #FFFFFF;
-  --bg-dark: #121214;
-  --bg-card: rgba(225, 225, 230, 1);
-  --bg-card-dark: rgba(2, 121, 157, 1);
-  --font-color: rgba(50, 50, 56, 1);
+  --bg-color: #FFFFFF;
+  --text-color: #323238;
+  --bg-card: #E1E1E6;
+  --bg-card-dark: #02799D;
   
   /*FONT-SIZE*/
   font-size: 62.5%;
@@ -21,10 +20,25 @@
   --ff-primary: 'Roboto', sans-serif;
 }
 
+.dark-mode:root {
+  --bg-color: #121214;
+  --text-color: #FFFFFF;
+  --bg-card: #29292E;
+  --bg-card-dark: #0A3442;
+}
+
+main button svg > path {
+  fill: var(--text-color);
+}
+
+.cards svg > path {
+  fill: var(--text-color);
+}
+
 body {
-  color: var(--font-color);
-  --ff-primary: 'Roboto', sans-serif;
-  background: var(--bg-light);
+  color: var(--text-color);
+  font-family: var(--ff-primary);
+  background: var(--bg-color);
 }
 
 header {
@@ -33,8 +47,14 @@ header {
   margin: 6rem 6rem 0 0;
 }
 
-.light-mode:hover {
+header .light-mode:hover {
   cursor: pointer;
+  scale: 1.1;
+}
+
+header .dark-mode:hover {
+  cursor: pointer;
+  scale: 1.1;
 }
 
 .container {
@@ -111,9 +131,10 @@ span {
 }
 
 .volumeBar {
-  background: #323238;
+  background: var(--text-color);
   border-radius: .5rem;
   height: .4rem;  
+  cursor: pointer;
 }
 
 
@@ -124,7 +145,7 @@ span {
   height: 1.6rem;
   border-radius: 50%;
   border: none;
-  background: #323238;
+  background: var(--text-color);
   
 }
 
@@ -133,15 +154,12 @@ span {
   height: 1.6rem;
   border-radius: 50%;
   border: none;
-  background: #323238;
+  background: var(--text-color);
 }
 
-
-
-.card:hover {
-  cursor: pointer;
-}
-
-.clicked {
+.clicked  {
   background-color: var(--bg-card-dark);
+  
 }
+
+
