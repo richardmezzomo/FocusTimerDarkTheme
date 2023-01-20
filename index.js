@@ -1,3 +1,4 @@
+// DOM
 const buttonPlay = document.querySelector('.play')
 const buttonPause =  document.querySelector('.pause')
 const buttonStop = document.querySelector('.stop')
@@ -18,23 +19,12 @@ const volumeRain = document.querySelector('#volumeRain')
 const volumeCoffeeShop = document.querySelector('#volumeCoffeeShop')
 const volumeFireplace = document.querySelector('#volumeFireplace')
 
-//SOUNDS
+// SOUNDS
 const soundOfRainForest = new Audio('./sounds/rainForest.wav')
 const soundOfRain = new Audio('./sounds/rain.wav')
 const soundOfCoffeeShop = new Audio('./sounds/coffeeShop.wav')
 const soundOfFireplace = new Audio('./sounds/fireplace.wav')
 const kitchenTimer = new Audio("./sounds/KitchenTimer.mp3")
-
-
-function togglePlay(myAudio) {
-  myAudio.loop = true;
-  return myAudio.paused ? myAudio.play() : myAudio.pause();
-}
-
-function volumePlay(myAudio, volumeBar) {
-  myAudio.volume = volumeBar.value / 100
-}
-
 
 // VARIABLES
 let timerTimeOut;
@@ -103,8 +93,6 @@ function countdown() {
   
 }
 
-
-
 function changeTheme(){
   buttonDarkMode.classList.toggle('hide')
   buttonLightMode.classList.toggle('hide')
@@ -112,8 +100,16 @@ function changeTheme(){
   html.classList.toggle('dark-mode')
 }
 
-// EVENTS
+function togglePlay(myAudio) {
+  myAudio.loop = true;
+  return myAudio.paused ? myAudio.play() : myAudio.pause();
+}
 
+function volumePlay(myAudio, volumeBar) {
+  myAudio.volume = volumeBar.value / 100
+}
+
+// EVENTS
 buttonLightMode.addEventListener('click',() => changeTheme()) 
 buttonDarkMode.addEventListener('click',() => changeTheme()) 
 
