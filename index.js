@@ -72,6 +72,7 @@ function countdown() {
 
     if(isFinished) {
       togglePlay(kitchenTimer)
+      kitchenTimer.loop = false
       return
     }
 
