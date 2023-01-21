@@ -187,5 +187,3 @@ cardOfFireplace.addEventListener('dblclick', function() {
 cardOfFireplace.addEventListener('input', function() {
   volumePlay(soundOfFireplace, volumeFireplace)
 })
-
-
