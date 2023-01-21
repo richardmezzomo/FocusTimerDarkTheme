@@ -21,7 +21,7 @@ https://richardbmezzomo.github.io/FocusTimerDarkTheme/
 
 This project was very important to help improve my programming logic and I learned to control inputs with Javascript
 
-## Autores
+## Author
 
 - [@richardbmezzomo](https://github.com/RichardBMezzomo)
 
